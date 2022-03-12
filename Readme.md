@@ -6,7 +6,7 @@
 ### Ronaldo Henao
 
 1. Conexion telnet www.escuelaing.edu.co 80\
-![](4.jpeg)\
+![](/imagenes/4.jpeg)\
 Al realizar esa consulta sale el error 400 de tipo bad request
 * Otros tipos de errores:
 1. Informacion 100
@@ -14,9 +14,9 @@ Al realizar esa consulta sale el error 400 de tipo bad request
 3. Redireccion 300
 4. Error servidor 500 
 2. Conexion telnet www.httpbin.org 80\
-![](1.png)
+![](/imagenes/1.png)
 3. wc -c\
-![](5.jpeg)\
+![](/imagenes/5.jpeg)\
 numero de lineas del archivo HTML
 * Diferencias entre GET y POST:\
 El metodo GET solicita una representacion de un recurso especifico\
@@ -33,9 +33,9 @@ El metodo POST es utilizado para enviar una entidad a un recurso en especifico\
 4.
 * curl www.httpbin.org
 * curl -v www.httpbin.org\
-![](2.jpeg)
+![](/imagenes/2.jpeg)
 * curl -i www.httpbin.org\
-![](3.jpeg)
+![](/imagenes/3.jpeg)
 * Diferencias parametros -v y -i
 -v, --verbose Hacer que la operación sea más comunicativa
 -i, --include Incluir encabezados de respuesta de protocolo en la salida
@@ -56,4 +56,4 @@ Cargamos en la pagina la direccion:
 donde el name es la variable del servlet ubicado en la clase SampleServlet.
 
 * Resultado final:\
-![](pagina.jpeg)
+![](/imagenes/pagina.jpeg)
