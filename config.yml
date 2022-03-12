@@ -6,4 +6,4 @@ deployment:
   staging:
     branch: main
     heroku: 
-      appname: pdsw-circleci-demo
+      appname: guessbean
