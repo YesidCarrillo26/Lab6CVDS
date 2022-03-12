@@ -57,3 +57,12 @@ donde el name es la variable del servlet ubicado en la clase SampleServlet.
 
 * Resultado final:\
 ![](/imagenes/pagina.jpeg)
+
+
+## CODACY
+
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/dffba6d99c784ceeaab9ee0e151a4497)](https://www.codacy.com/gh/YesidCarrillo26/Lab6CVDS/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=YesidCarrillo26/Lab6CVDS&amp;utm_campaign=Badge_Grade)
+
+## CircleCI
+
+[![CircleCI](https://circleci.com/gh/YesidCarrillo26/Lab6CVDS/tree/main.svg?style=svg)](https://circleci.com/gh/YesidCarrillo26/Lab6CVDS/tree/main)
