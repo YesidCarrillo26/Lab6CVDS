@@ -18,9 +18,20 @@ public class GuessBean {
     private ArrayList<Intento> intentos;
     private String error = "";
 
+    public String getState() {
+        return state;
+    }
+
+    public void setState(String state) {
+        this.state = state;
+    }
+
+    private String state;
+
     public GuessBean() {
         error = "Ha cargado";
         intentos = new ArrayList<>();
+        state = "Jugando";
         loadNumber();
     }
 
@@ -50,12 +61,17 @@ public class GuessBean {
             int numero = Integer.parseInt(number);
             if (!gameState) intentos.add(new Intento(numIntentos,numero));
             numIntentos++;
+            error = "Ha cargado";
             checkState(numero);
         }
         catch (Exception e){
             error = e.getMessage();
+            if (error != GuessBeanException.losingGame || error != GuessBeanException.winningGame){
+                error = "Ha ingresado mal el dato";
+            }
         }
     }
+
 
     public ArrayList<Intento> getIntentos() {
         return intentos;
@@ -71,10 +87,13 @@ public class GuessBean {
         intentos.clear();
         premio = 100000;
         gameState = false;
+        error = "Ha cargado";
+        state = "Jugando";
     }
 
     public void checkState(int check) throws GuessBeanException{
         if(numberGuessing == check){
+            state = "finalizado";
             gameState = true;
             throw new GuessBeanException(GuessBeanException.winningGame);
         }
@@ -85,6 +104,7 @@ public class GuessBean {
                 premio = 0;
                 gameState = true;
                 error = "";
+                state = "finalizado";
                 throw new GuessBeanException(GuessBeanException.losingGame);
             }
         }
