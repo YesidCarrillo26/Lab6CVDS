@@ -1,11 +1,12 @@
 body {
     text-align: center;
+    background-color: lightblue;
 }
 form{
     display: inline-block;
 }
 .panelGridCenter {
-    margin: 0 auto;
+    margin: 10 auto;
 }
 
 .ui-datatable {

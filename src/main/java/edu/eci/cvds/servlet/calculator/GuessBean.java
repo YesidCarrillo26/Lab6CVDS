@@ -17,6 +17,7 @@ public class GuessBean {
     private int numberGuessing;
     private ArrayList<Intento> intentos;
     private String error = "";
+    private String state;
 
     public String getState() {
         return state;
@@ -25,8 +26,6 @@ public class GuessBean {
     public void setState(String state) {
         this.state = state;
     }
-
-    private String state;
 
     public GuessBean() {
         error = "Ha cargado";
@@ -64,11 +63,11 @@ public class GuessBean {
             error = "Ha cargado";
             checkState(numero);
         }
+        catch (GuessBeanException g){
+            error = g.getMessage();
+        }
         catch (Exception e){
-            error = e.getMessage();
-            if (error != GuessBeanException.losingGame || error != GuessBeanException.winningGame){
-                error = "Ha ingresado mal el dato";
-            }
+            error = "Ha ingresado mal el dato";
         }
     }
 

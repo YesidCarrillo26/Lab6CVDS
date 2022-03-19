@@ -24,8 +24,8 @@
             <p:commandButton resetValues="true" value="Intento" update="guess_form" actionListener="#{guessBean.intento(input.value)}"/>
             <p:commandButton value="Reiniciar" update="guess_form" actionListener="#{guessBean.restart()}"/>
         </h:panelGrid>
-        <p:outputLabel class="invisible" value="notificacion:"/>
-        <p:outputLabel class="invisible" value="#{guessBean.error}"/>
+        <p:outputLabel value="notificacion:"/>
+        <p:outputLabel value="#{guessBean.error}"/>
         <p:dataTable var="tintentos" value="#{guessBean.intentos}">
             <p:column headerText="Intento #">
                 <h:outputText value="#{tintentos.numberIntento}" />
